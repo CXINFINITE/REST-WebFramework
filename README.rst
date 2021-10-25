@@ -47,8 +47,7 @@ Please see ``docs`` of respective versions (so called) from available, under
 section.
 
 Current versions of the project:
-*  Basic: `docs/Basic
-   <https://github.com/CXINFINITE/REST-WebFramework/blob/main/docs/Basic/>`_.
+1. Basic: `docs/Basic <https://github.com/CXINFINITE/REST-WebFramework/blob/main/docs/Basic/>`_.
 
 Style guide
 ===========
@@ -58,5 +57,4 @@ Follows ``PEP 8`` guidelines (mostly).
 Licensing
 =========
 .. State license and link to text version.
-See `LICENSE
-   <https://github.com/CXINFINITE/REST-WebFramework/blob/main/LICENSE>`_.
+See `LICENSE <https://github.com/CXINFINITE/REST-WebFramework/blob/main/LICENSE>`_.

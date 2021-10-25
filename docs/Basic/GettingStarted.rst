@@ -5,8 +5,7 @@ Getting Started
 Setting up
 ==========
 1. Clone this repository.
-2. Copy contents of `src/Basic/
-   <https://github.com/CXINFINITE/REST-WebFramework/blob/main/src/Basic/>`_
+2. Copy contents of `src/Basic/ <https://github.com/CXINFINITE/REST-WebFramework/blob/main/src/Basic/>`_
    to suitable directory.
    
    Make sure to copy both ``REST_WebFramework/`` and ``REST_WebFramework.py``.
@@ -31,5 +30,4 @@ Supported Http statuses
 *  501: Not Implemented
 *  505L HTTP Version not supported
 
-For information on these, refer to `RFC - 2068
-   <https://datatracker.ietf.org/doc/html/rfc2068>`_.
+For information on these, refer to `RFC - 2068 <https://datatracker.ietf.org/doc/html/rfc2068>`_.
