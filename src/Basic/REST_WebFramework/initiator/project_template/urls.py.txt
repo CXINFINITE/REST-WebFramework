@@ -1,0 +1,7 @@
+from REST_WebFramework.urls import include, path
+
+urlpatterns = [
+   # path('path/', view.function, namespace='namespace', methods=['GET',]),
+   # or
+   # path('path/', include('AppName.urls', namespace='namespace')),
+]

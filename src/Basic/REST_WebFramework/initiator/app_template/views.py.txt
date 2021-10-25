@@ -1,0 +1,50 @@
+from REST_WebFramework.http import HttpResponse, HttpResponseRedirect
+from REST_WebFramework.shortcuts import render, redirect
+from REST_WebFramework.views.decorators import REST_Methods
+
+# Create your views as shown:
+
+# Method 1:
+# 
+# def index (request,):
+#    return HttpResponse(request,
+#       content='<h1>HEY!</h1>',
+#       content_type='text/html',
+#       status_code=200,
+#    ) # Just for example
+
+# Method 2:
+# 
+# def index (request,):
+#    return render(request, # Just for example
+#       '{{APP_NAME}}/<template.extension>', # generally template.html
+#       # Store templates in 'templates/{{APP_NAME}}/index.js',
+#       status_code=200, # default code - 200 = OK
+#    )
+
+# Method 3:
+# 
+# def index (request,):
+#    return render(request, # Just for example
+#       '{{APP_NAME}}/index.html',
+#       # you can even supply js/json/xml/txt types. See doc for more details.
+#       # ex: '{{APP_NAME}}/index.js',
+#       # Store templates in 'templates/{{APP_NAME}}/index.js',
+#       status_code=200, # default code - 200 = OK
+#    )
+
+# Method 4:
+# Must if methods are not defined or are []  in urls.py
+# methods below should not be None or []
+# 
+# @REST_Methods(['GET', 'POST'])
+# def index (request,):
+#    return HttpResponse(request, status_code=404) # Just for example
+
+# Method 5:
+# Must if methods are not defined or are []  in urls.py
+# methods below should not be None or []
+# 
+# @REST_Methods(methods=['GET', 'POST'])
+# def index (request,):
+#    return HttpResponse(request, status_code=404) # Just for example

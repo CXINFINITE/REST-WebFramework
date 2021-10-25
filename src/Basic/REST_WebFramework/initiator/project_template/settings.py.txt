@@ -1,0 +1,35 @@
+from REST_WebFramework.middleware import (
+   RequestValidator, PathResolver, DefaultMiddleware
+)
+
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+ALLOWED_HOSTS = [
+]
+
+SERVER = {
+   'MODE': 'sequential', # sequential
+   'MAX_WAITING': 8,
+   'MAX_PARALLEL_CONNECTIONS': 4, # if mode == 'thread'
+}
+
+MIDDLEWARE = [
+   # RequestValidator must be the 1st entry.
+   RequestValidator,
+   
+   # Your middlewares here:
+   
+   
+   # PathResolver is recommended to be 2nd last entry, but not last or
+   # first.
+   PathResolver,
+   
+   # DefaultMiddleware must be the last entry.
+   DefaultMiddleware,
+]
+
+ROOT_URLCONF = '{{PROJECT_NAME}}.urls'
+
+STATIC_URL = '/static/'

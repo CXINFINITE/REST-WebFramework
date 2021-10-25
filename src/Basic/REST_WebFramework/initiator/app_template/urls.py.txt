@@ -1,0 +1,17 @@
+from REST_WebFramework.urls import include, path
+
+from . import views
+
+# Replace this with namespace as defined in parent urlpatterns,
+# generally, in ROOT_URLPATTERNS ('{{PROJECT_NAME}}/urls.py')
+# app_name is must if namespace is not specified in parent urlpatterns.
+app_name = "{{APP_NAME}}"
+
+urlpatterns = [
+   # path('path/', views.function, namespace='namespace'),
+   # if using REST_Methods decorator.
+   # or
+   # path('path/', views.function, namespace='namespace', methods=['GET',]),
+   # or
+   # path('path/', include('AppName.urls', namespace='namespace')),
+]
