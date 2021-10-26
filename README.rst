@@ -23,7 +23,7 @@ all four HTTP CRUD (Create/Read/Update/Delete) operations like:
 Purpose
 =======
 Although there exists many frameworks for the same, this was built to
-understand working of those systems on a lower level (not at low as packets)
+understand working of those systems on a lower level (not as low as packets)
 and / or to practice coding.
 
 Expectations
@@ -48,7 +48,8 @@ Please see ``docs`` of respective versions (so called) from available, under
 section.
 
 Current versions of the project:
-1. Basic: `docs/Basic <https://github.com/CXINFINITE/REST-WebFramework/blob/main/docs/Basic/>`_.
+
+*  Basic: `docs/Basic <https://github.com/CXINFINITE/REST-WebFramework/blob/main/docs/Basic/>`_.
 
 Style guide
 ===========
