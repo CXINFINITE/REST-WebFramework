@@ -143,7 +143,7 @@ class http1_1:
          if(error != None):
             return None, raw_request2, error
          
-         request['header']['values'].update(
+         request['values'].update(
             body_parsed,
          )
       
