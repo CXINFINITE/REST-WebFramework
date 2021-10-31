@@ -215,6 +215,8 @@ class http1_1:
       )
       
       for key, value in response['header'].items():
+         if (key == 'data'):
+            continue
          raw_response += "{0}: {1}\r\n".format(
             key, value,
          )

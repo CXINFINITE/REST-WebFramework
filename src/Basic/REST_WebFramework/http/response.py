@@ -8,13 +8,15 @@ def HTTP_Response (request, status_code, status, headers):
       'header': headers,
    }
 
-def Http200 (request, content, content_type='text/html'):
+def Http200 (request, content=None, content_type='text/html'):
    headers = {
       'Connection': request['header'].get('Connection') or 'close',
-      'data': content.strip(),
-      'Content-Type': content_type,
-      'Content-Length': len(content.strip()),
    }
+   
+   if (content != None):
+      headers['data'] = content.strip()
+      headers['Content-Type'] = content_type
+      headers['Content-Length'] = len(content.strip())
    
    return HTTP_Response(request, 200, 'OK', headers)
 
@@ -246,8 +248,6 @@ def HttpResponse (request, content=None,
       return HttpResponse(request, status_code=500)
    
    if (status_code == 200):
-      if (content == None):
-         return HttpResponse(request, status_code=202)
       return Http200(request, content, content_type)
    elif (status_code == 201):
       return Http201(request, content, content_type)

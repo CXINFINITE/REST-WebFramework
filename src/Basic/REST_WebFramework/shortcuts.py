@@ -1,6 +1,6 @@
 import os
 
-from REST_WebFramework import core
+from REST_WebFramework import core, http
 # from .core import configuration
 
 def redirect (request, path, *args, **kwargs):
@@ -48,9 +48,9 @@ def redirect (request, path, *args, **kwargs):
          url = path
    
    if (url == None):
-      return HttpResponse(request, *args, status_code=500, **kwargs,)
+      return http.HttpResponse(request, *args, status_code=500, **kwargs,)
    
-   return HttpResponseRedirect(request, url, *args, **kwargs)
+   return http.HttpResponseRedirect(request, url, *args, **kwargs)
 
 def render (request, template, status_code=200):
    content = None
@@ -58,20 +58,20 @@ def render (request, template, status_code=200):
    
    template_path = os.path.abspath(
       os.path.join(
-         core.configuration.BASE_DIR, 'templates', template,
+         core.configuration.PROJECT_DIR, 'templates', template,
       )
    )
    
    if (not os.path.isfile(template_path)):
       template_path = os.path.abspath(
          os.path.join(
-            core.configuration.BASE_DIR, template.split('/', 1)[0],
+            core.configuration.PROJECT_DIR, template.split('/', 1)[0],
             'templates', template,
          )
       )
    
    if (not os.path.isfile(template_path)):
-      return HttpResponse(
+      return http.HttpResponse(
          request, status_code=500,
       )
    
@@ -80,7 +80,7 @@ def render (request, template, status_code=200):
       content = fh.read()
       fh.close()
    except:
-      return HttpResponse(
+      return http.HttpResponse(
          request, status_code=500,
       )
    
@@ -103,6 +103,6 @@ def render (request, template, status_code=200):
       else:
          content_type = 'text/plain'
 
-   return HttpResponse(
+   return http.HttpResponse(
       request, content, content_type=content_type, status_code=status_code,
    )
